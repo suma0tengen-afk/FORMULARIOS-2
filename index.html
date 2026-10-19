@@ -1,26 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formularios II</title>
+    <style>
+        #titulo {
+            color: rgb(42, 110, 165);
+        }
+        #p1,#p2,#p3 {
+            color: rgb(127, 129, 255);
+        }
+    </style>
 </head>
 <body>
-    <h1>Tipos de Input</h1>
+    <h1 id="titulo">Formularios II</h1>
     <form action="procesa.php">
     <fieldset>
         <legend>Datos personales</legend>
-        <p>
+        <p id="p1">
             <label for="nom">Nombre:</label>
             <input type="text" 
             maxlength="6" 
-            name="nombre"
+            name="nombre" required
+            placeholder="Escriba su nombre completo"
             id="nom">
         </p>
-        <p>
+        <p id="p2">
+            <label for="pob">Poblacion:</label>
+            <input type="text" value="Alcazar de San Juan"
+            maxlength="50" 
+            name="pob"autofocus
+            id="pob">
+        </p>
+        <p id="p3">
             <label for="contrase">Contraseña:</label>
             <input type="password" 
             maxlength="6" 
+            minlength="4"
             name="contrase"
             id="contrase">
         </p>
@@ -37,7 +54,7 @@
         <p>
             <label for="fumador">Fumador</label>
             <input type="checkbox" name="fuma"
-            id="fumador">
+            id="fumador" checked >
         </p>
     </fieldset>
         <p>
@@ -77,9 +94,14 @@
             id="email">
         </p>
          <p>
-            <label for="foto">adjunta Foto:</label>
+            <label for="foto">Adjunta Foto:</label>
             <input type="file" name="foto" 
             id="foto">
+        </p>
+        <p>
+            <label for="web">Adjunta tu web:</label>
+            <input type="url" name="web" 
+            id="web">
         </p>
         <!--Botones de envío y reset-->
          <p>
